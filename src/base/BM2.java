@@ -131,7 +131,7 @@ public class BM2 extends BookManager {
             } else if(book instanceof  AudioBook){
                 System.out.print("AudioBook, ");
             } else{
-                System.out.println("Book, ");
+                System.out.print("Book, ");
             }
             System.out.print(book.getId());
             System.out.print(", ");
