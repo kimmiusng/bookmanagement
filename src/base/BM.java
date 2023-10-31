@@ -57,7 +57,7 @@ public class BM extends BookManager {
 
     @Override
     public void addBook() {
-        System.out.println("등록 메서드 실행");
+//        System.out.println("등록 메서드 실행");
         // 1. 콘솔화면을 통해 사용자로부터 도서정보를 입력을 받는다.
         // id, 제목, 저자, isbn, 출판일 (5가지) (v)
         // 위의 정보로 책 객체를 생성한다. (v)
@@ -144,7 +144,7 @@ public class BM extends BookManager {
 
     @Override
     public void removeBook() {
-        System.out.println("삭제 메서드 실행");
+//        System.out.println("삭제 메서드 실행");
         // 1. 삭제할 도서를 찾는다.
         // 없으면 삭제 불가
         // 있으면 삭제 가능
