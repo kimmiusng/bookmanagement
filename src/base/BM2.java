@@ -142,14 +142,14 @@ public class BM2 extends BookManager {
             System.out.print(book.getPublishedDate());
             if(book instanceof Ebook){
                 System.out.print(", ");
-                System.out.print(((Ebook)book).getFileSize());
+                System.out.print(((Ebook)book).getFileSize() + "mb");
             } else if(book instanceof AudioBook){
                 System.out.print(", ");
-                System.out.print(((AudioBook)book).getFileSize());
+                System.out.print(((AudioBook)book).getFileSize() + "mb");
                 System.out.print(", ");
                 System.out.print(((AudioBook)book).getLanguage());
                 System.out.print(", ");
-                System.out.print(((AudioBook)book).getPlayTime());
+                System.out.print(((AudioBook)book).getPlayTime() + "초");
             }
             System.out.print("]");
             System.out.println();
