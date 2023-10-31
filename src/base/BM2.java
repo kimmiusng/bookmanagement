@@ -11,8 +11,8 @@ public class BM2 extends BookManager {
     @Override
     void init() {
         bookList.add(new Book(1L, "돈의 속성(300쇄 리커버에디션)", "김승호", Long.parseLong("9791188331796"), LocalDate.parse("2020-06-15")));
-        bookList.add(new Book(2L,"K 배터리 레볼루션", "박순혁", Long.parseLong("9791191521221"), LocalDate.parse("2023-02-20")));
-        bookList.add(new Book(3L, "위기의 역사", "오건영", Long.parseLong("9791169850360"), LocalDate.parse("2023-07-19")));
+        bookList.add(new Ebook(2L,"K 배터리 레볼루션", "박순혁", Long.parseLong("9791191521221"), LocalDate.parse("2023-02-20"),"45"));
+        bookList.add(new AudioBook(3L, "위기의 역사", "오건영", Long.parseLong("9791169850360"), LocalDate.parse("2023-07-19"),"567","KOR",3500));
     }
 
     @Override
@@ -63,8 +63,12 @@ public class BM2 extends BookManager {
         // 2. 도서를 등록한다.
         // 사서를 통해 도서 저장 요청
         String[] bookInfo = new String[8];
-        System.out.print("책의 타입 (1. Book, 2. Ebook, 3. AudioBook) : ");
+        System.out.print("등록할 책의 종류를 선택해주세요.\n(1)Book\n(2)Ebook\n(3)AudioBook)\n>> ");
         String bookType = sc.nextLine();
+        if(!bookType.equals("1") && !bookType.equals("2") && !bookType.equals("3")){
+            System.out.println("Error : 잘못된 입력입니다.");
+            return;
+        }
 
         System.out.print("id: ");
         bookInfo[0] = sc.nextLine();
@@ -77,14 +81,14 @@ public class BM2 extends BookManager {
         System.out.print("출판일(YYYY-MM-DD): ");
         bookInfo[4] = sc.nextLine();
         if(Integer.parseInt(bookType) == 2){
-            System.out.print("파일크기, mb : ");
+            System.out.print("파일크기(mb) : ");
             bookInfo[5] = sc.nextLine();
         } else if(Integer.parseInt(bookType) == 3){
-            System.out.print("파일크기, mb : ");
+            System.out.print("파일크기(mb) : ");
             bookInfo[5] = sc.nextLine();
             System.out.print("재생언어 : ");
             bookInfo[6] = sc.nextLine();
-            System.out.print("재생시간, 초 : ");
+            System.out.print("재생시간(초) : ");
             bookInfo[7] = sc.nextLine();
         }
 
@@ -105,7 +109,7 @@ public class BM2 extends BookManager {
                     LocalDate.parse(bookInfo[4]),
                     bookInfo[5]);
             bookList.add(book);
-        } else if(Integer.parseInt(bookType) == 3){
+        } else {
             book = new AudioBook(Long.parseLong(bookInfo[0]),
                     bookInfo[1],
                     bookInfo[2],
@@ -115,8 +119,6 @@ public class BM2 extends BookManager {
                     bookInfo[6],
                     Integer.parseInt(bookInfo[7]));
             bookList.add(book);
-        } else {
-            System.out.println("책 형식 입력이 잘못되었습니다.");
         }
     }
 
@@ -189,14 +191,14 @@ public class BM2 extends BookManager {
         System.out.print("출판일(YYYY-MM-DD): ");
         bookInfo[4] = sc.nextLine();
         if(book instanceof Ebook){
-            System.out.print("파일크기, mb : ");
+            System.out.print("파일크기(mb) : ");
             bookInfo[5] = sc.nextLine();
         } else if(book instanceof AudioBook){
-            System.out.print("파일크기, mb : ");
+            System.out.print("파일크기(mb) : ");
             bookInfo[5] = sc.nextLine();
             System.out.print("재생언어 : ");
             bookInfo[6] = sc.nextLine();
-            System.out.print("재생시간, 초 : ");
+            System.out.print("재생시간(초) : ");
             bookInfo[7] = sc.nextLine();
         }
 
