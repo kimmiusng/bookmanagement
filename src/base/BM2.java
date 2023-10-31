@@ -63,6 +63,9 @@ public class BM2 extends BookManager {
         // 2. 도서를 등록한다.
         // 사서를 통해 도서 저장 요청
         String[] bookInfo = new String[8];
+        System.out.print("책의 타입 (1. Book, 2. Ebook, 3. AudioBook) : ");
+        String bookType = sc.nextLine();
+
         System.out.print("id: ");
         bookInfo[0] = sc.nextLine();
         System.out.print("제목: ");
@@ -73,12 +76,10 @@ public class BM2 extends BookManager {
         bookInfo[3] = sc.nextLine();
         System.out.print("출판일(YYYY-MM-DD): ");
         bookInfo[4] = sc.nextLine();
-        System.out.print("책의 타입 (Book, Ebook, AudioBook) : ");
-        String bookType = sc.nextLine();
-        if(bookType.equals("Ebook")){
+        if(Integer.parseInt(bookType) == 2){
             System.out.print("파일크기, mb : ");
             bookInfo[5] = sc.nextLine();
-        } else if(bookType.equals("AudioBook")){
+        } else if(Integer.parseInt(bookType) == 3){
             System.out.print("파일크기, mb : ");
             bookInfo[5] = sc.nextLine();
             System.out.print("재생언어 : ");
@@ -89,14 +90,14 @@ public class BM2 extends BookManager {
 
         // book을 저장소에 저장
         Book book;
-        if(bookType.equals("Book")) {
+        if(Integer.parseInt(bookType) == 1) {
             book = new Book(Long.parseLong(bookInfo[0]),
                     bookInfo[1],
                     bookInfo[2],
                     Long.parseLong(bookInfo[3]),
                     LocalDate.parse(bookInfo[4]));
             bookList.add(book);
-        } else if(bookType.equals("Ebook")){
+        } else if(Integer.parseInt(bookType) == 2){
             book = new Ebook(Long.parseLong(bookInfo[0]),
                     bookInfo[1],
                     bookInfo[2],
@@ -104,7 +105,7 @@ public class BM2 extends BookManager {
                     LocalDate.parse(bookInfo[4]),
                     bookInfo[5]);
             bookList.add(book);
-        } else if(bookType.equals("AudioBook")){
+        } else if(Integer.parseInt(bookType) == 3){
             book = new AudioBook(Long.parseLong(bookInfo[0]),
                     bookInfo[1],
                     bookInfo[2],
@@ -123,6 +124,13 @@ public class BM2 extends BookManager {
     void printAllBook() {
         for (Book book : bookList) {
             System.out.print("[");
+            if(book instanceof Ebook){
+                System.out.print("Ebook, ");
+            } else if(book instanceof  AudioBook){
+                System.out.print("AudioBook, ");
+            } else{
+                System.out.println("Book, ");
+            }
             System.out.print(book.getId());
             System.out.print(", ");
             System.out.print(book.getName());
