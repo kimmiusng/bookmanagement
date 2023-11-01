@@ -128,11 +128,12 @@ public class BM3 extends BookManager {
     void printBook() {
         while (true) {
             System.out.println("■■■■■■ 도서 조회 메뉴 ■■■■■■");
-            System.out.println("(1) 모든 도서 조회");
-            System.out.println("(2) 도서 이름으로 검색");
+            System.out.println("(1) 전체 조회");
+            System.out.println("(2) 책 제목으로 조회");
             System.out.println("(3) 도서 이름 사전순 조회");
-            System.out.println("(4) 도서 출간일 기간으로 검색");
-            System.out.println("(5) 도서 출간일순으로 조회");
+            System.out.println("(4) 출간일 기간으로 조회");
+            System.out.println("(5) 출간일순 조회");
+            System.out.println("(q) 메뉴 나가기");
             System.out.print("선택 >> ");
             String userInput = sc.nextLine();
 
@@ -151,6 +152,8 @@ public class BM3 extends BookManager {
                     return;
                 case "5":
                     printSortBookPublishDate();
+                    return;
+                case "q":
                     return;
                 default:
                     System.out.println("Error! 잘못된 입력입니다. 다시 입력해주세요.");
