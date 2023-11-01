@@ -31,7 +31,7 @@ public class BM3 extends BookManager {
             switch (userInput) {
                 case "1":
                     // 조회
-                    printAllBook();
+                    printBook();
                     break;
                 case "2":
                     // 등록
@@ -123,6 +123,39 @@ public class BM3 extends BookManager {
         }
     }
 
+    void printBook() {
+        while (true) {
+            System.out.println("■■■■■■ 도서 조회 ■■■■■■");
+            System.out.println("(1) 모든 도서 조회");
+            System.out.println("(2) 도서 이름으로 검색하기");
+            System.out.println("(3) 모든 도서 이름순으로 조회");
+            System.out.println("(4) 도서 출간일 기간으로 검색하기");
+            System.out.println("(5) 모든 도서 출간일순으로 조회");
+            System.out.print("선택 >> ");
+            String userInput = sc.nextLine();
+
+            switch (userInput) {
+                case "1":
+                    printAllBook();
+                    return;
+                case "2":
+                    printBookName();
+                    return;
+                case "3":
+                    printSortBookName();
+                    return;
+                case "4":
+                    printBookPublishDate();
+                    return;
+                case "5":
+                    printSortBookPublishDate();
+                    return;
+                default:
+                    System.out.println("Error! 잘못된 입력입니다. 다시 입력해주세요.");
+            }
+        }
+    }
+
     @Override
     void printAllBook() {
         for (Book book : bookList) {
@@ -157,6 +190,22 @@ public class BM3 extends BookManager {
             System.out.print("]");
             System.out.println();
         }
+
+    }
+
+    void printBookName(){
+
+    }
+
+    void printSortBookName(){
+
+    }
+
+    void printBookPublishDate(){
+
+    }
+
+    void printSortBookPublishDate(){
 
     }
 
