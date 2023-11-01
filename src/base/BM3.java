@@ -70,16 +70,16 @@ public class BM3 extends BookManager {
             return;
         }
 
-        System.out.print("id: ");
-        bookInfo[0] = sc.nextLine();
+        do {System.out.print("id: ");
+        bookInfo[0] = sc.nextLine();} while (!isLong(bookInfo[0]));
         System.out.print("제목: ");
         bookInfo[1] = sc.nextLine();
         System.out.print("저자: ");
         bookInfo[2] = sc.nextLine();
-        System.out.print("isbn: ");
-        bookInfo[3] = sc.nextLine();
-        System.out.print("출판일(YYYY-MM-DD): ");
-        bookInfo[4] = sc.nextLine();
+        do {System.out.print("isbn: ");
+        bookInfo[3] = sc.nextLine();} while (!isLong(bookInfo[3]));
+        do {System.out.print("출판일(YYYY-MM-DD): ");
+        bookInfo[4] = sc.nextLine();} while (!isLocalDate(bookInfo[4]));
         if(Integer.parseInt(bookType) == 2){
             System.out.print("파일크기(mb) : ");
             bookInfo[5] = sc.nextLine();
@@ -88,8 +88,8 @@ public class BM3 extends BookManager {
             bookInfo[5] = sc.nextLine();
             System.out.print("재생언어 : ");
             bookInfo[6] = sc.nextLine();
-            System.out.print("재생시간(초) : ");
-            bookInfo[7] = sc.nextLine();
+            do {System.out.print("재생시간(초) : ");
+            bookInfo[7] = sc.nextLine();} while (!isLong(bookInfo[7]));
         }
 
         // book을 저장소에 저장
@@ -168,9 +168,9 @@ public class BM3 extends BookManager {
         // 2. 수정할 도서가 있을 때:
         // 새로운 입력 값 : 사용자로부터 입력받는다.
         // 도서 정보(필드)를 바꾼다.
-
-        System.out.print("수정할 도서번호를 입력해주세요: ");
-        String id = sc.nextLine();
+        String id = "";
+        do {System.out.print("수정할 도서번호를 입력해주세요: ");
+        id = sc.nextLine();} while (!isLong(id));
         Book book = findBook(Long.parseLong(id));
 
         // 책이 존재하지 않을 때
@@ -186,10 +186,10 @@ public class BM3 extends BookManager {
         bookInfo[1] = sc.nextLine();
         System.out.print("저자: ");
         bookInfo[2] = sc.nextLine();
-        System.out.print("isbn: ");
-        bookInfo[3] = sc.nextLine();
-        System.out.print("출판일(YYYY-MM-DD): ");
-        bookInfo[4] = sc.nextLine();
+        do {System.out.print("isbn: ");
+        bookInfo[3] = sc.nextLine();} while (!isLong(bookInfo[3]));
+        do {System.out.print("출판일(YYYY-MM-DD): ");
+        bookInfo[4] = sc.nextLine();} while (!isLocalDate(bookInfo[4]));
         if(book instanceof Ebook){
             System.out.print("파일크기(mb) : ");
             bookInfo[5] = sc.nextLine();
@@ -198,8 +198,8 @@ public class BM3 extends BookManager {
             bookInfo[5] = sc.nextLine();
             System.out.print("재생언어 : ");
             bookInfo[6] = sc.nextLine();
-            System.out.print("재생시간(초) : ");
-            bookInfo[7] = sc.nextLine();
+            do {System.out.print("재생시간(초) : ");
+            bookInfo[7] = sc.nextLine();} while (!isLong(bookInfo[7]));
         }
 
         book.setName(bookInfo[1]);
@@ -224,8 +224,9 @@ public class BM3 extends BookManager {
         // 있으면 삭제 가능
         // 2. 삭제할 도서가 있다면
         // 사서한테 도서 삭제 요청
-        System.out.print("삭제할 도서번호를 입력해주세요: ");
-        String id = sc.nextLine();
+        String id = "";
+        do {System.out.print("삭제할 도서번호를 입력해주세요: ");
+        id = sc.nextLine();} while (!isLong(id));
 
         Book book = findBook(Long.parseLong(id));
         if (book == null) {
