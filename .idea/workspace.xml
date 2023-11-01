@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2b044c0-9e5e-43e9-b0eb-1248806b5c8b" name="Changes" comment="Create BM3 printSystem finish">
+    <list default="true" id="c2b044c0-9e5e-43e9-b0eb-1248806b5c8b" name="Changes" comment="Create BM3 printSystem finish ver2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base/BM3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/BM3.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +26,12 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/base/BM3.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -67,7 +72,7 @@
       <updated>1698735925180</updated>
       <workItem from="1698735926213" duration="863000" />
       <workItem from="1698797056313" duration="203000" />
-      <workItem from="1698814891765" duration="7780000" />
+      <workItem from="1698814891765" duration="8739000" />
     </task>
     <task id="LOCAL-00001" summary="Make &amp; Check running BM2_Execute">
       <option name="closed" value="true" />
@@ -133,7 +138,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698821057866</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Create BM3 printSystem finish ver2">
+      <option name="closed" value="true" />
+      <created>1698823451499</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1698823451499</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,6 +173,7 @@
     <MESSAGE value="Create BM3 printSystem" />
     <MESSAGE value="Create BM3 printSystem 1,2,4" />
     <MESSAGE value="Create BM3 printSystem finish" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create BM3 printSystem finish" />
+    <MESSAGE value="Create BM3 printSystem finish ver2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create BM3 printSystem finish ver2" />
   </component>
 </project>

@@ -202,7 +202,7 @@ public class BM3 extends BookManager {
     void printBookName(){
         String name = "";
         do {System.out.print("검색할 도서의 이름을 입력하세요.: ");
-        name = sc.nextLine();} while (!name.isEmpty());
+        name = sc.nextLine();} while (name.isEmpty());
         int count = 0;
         for(Book book : bookList){
             String check = book.getName().replaceAll(name,"");
