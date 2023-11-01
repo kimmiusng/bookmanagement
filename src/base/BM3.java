@@ -127,12 +127,12 @@ public class BM3 extends BookManager {
 
     void printBook() {
         while (true) {
-            System.out.println("■■■■■■ 도서 조회 ■■■■■■");
+            System.out.println("■■■■■■ 도서 조회 메뉴 ■■■■■■");
             System.out.println("(1) 모든 도서 조회");
-            System.out.println("(2) 도서 이름으로 검색하기");
-            System.out.println("(3) 모든 도서 이름순으로 조회");
-            System.out.println("(4) 도서 출간일 기간으로 검색하기");
-            System.out.println("(5) 모든 도서 출간일순으로 조회");
+            System.out.println("(2) 도서 이름으로 검색");
+            System.out.println("(3) 도서 이름 사전순 조회");
+            System.out.println("(4) 도서 출간일 기간으로 검색");
+            System.out.println("(5) 도서 출간일순으로 조회");
             System.out.print("선택 >> ");
             String userInput = sc.nextLine();
 
@@ -200,11 +200,13 @@ public class BM3 extends BookManager {
     }
 
     void printBookName(){
-        System.out.print("검색할 도서의 이름을 입력하세요.: ");
-        String name = sc.nextLine();
+        String name = "";
+        do {System.out.print("검색할 도서의 이름을 입력하세요.: ");
+        name = sc.nextLine();} while (!name.isEmpty());
         int count = 0;
         for(Book book : bookList){
-            if(book.getName().equals(name)){
+            String check = book.getName().replaceAll(name,"");
+            if(!book.getName().equals(check)){
                 printBookForm(book);
                 count += 1;
             }
@@ -356,6 +358,9 @@ public class BM3 extends BookManager {
         return null;
     }
 
+
+    //do {System.out.print("id: ");
+    //        bookInfo[0] = sc.nextLine();} while (!isLong(bookInfo[0]));
     public Boolean isLong(String str){
         try{
             Long.parseLong(str);
