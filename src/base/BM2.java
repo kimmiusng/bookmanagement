@@ -63,7 +63,7 @@ public class BM2 extends BookManager {
         // 2. 도서를 등록한다.
         // 사서를 통해 도서 저장 요청
         String[] bookInfo = new String[8];
-        System.out.print("등록할 책의 종류를 선택해주세요.\n(1)Book\n(2)Ebook\n(3)AudioBook)\n>> ");
+        System.out.print("등록할 책의 종류를 선택해주세요.\n(1)Book\n(2)Ebook\n(3)AudioBook\n>> ");
         String bookType = sc.nextLine();
         if(!bookType.equals("1") && !bookType.equals("2") && !bookType.equals("3")){
             System.out.println("Error : 잘못된 입력입니다.");
