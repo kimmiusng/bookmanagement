@@ -3,6 +3,8 @@ package base;
 import java.time.DateTimeException;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class BM3 extends BookManager {
@@ -12,7 +14,7 @@ public class BM3 extends BookManager {
     @Override
     void init() {
         bookList.add(new Book(1L, "돈의 속성(300쇄 리커버에디션)", "김승호", Long.parseLong("9791188331796"), LocalDate.parse("2020-06-15")));
-        bookList.add(new Ebook(2L,"K 배터리 레볼루션", "박순혁", Long.parseLong("9791191521221"), LocalDate.parse("2023-02-20"),"45"));
+        bookList.add(new Ebook(2L,"K 배터리 레볼루션", "박순혁", Long.parseLong("9791191521221"), LocalDate.parse("2024-02-20"),"45"));
         bookList.add(new AudioBook(3L, "위기의 역사", "오건영", Long.parseLong("9791169850360"), LocalDate.parse("2023-07-19"),"567","KOR",3500));
     }
 
@@ -215,7 +217,19 @@ public class BM3 extends BookManager {
     }
 
     void printSortBookName(){
-
+        ArrayList<String> names = new ArrayList<>();
+        for(Book book : bookList){
+            names.add(book.getName());
+        }
+        Collections.sort(names);
+        for(String name : names){
+            for(Book book : bookList){
+                if(name.equals(book.getName())) {
+                    printBookForm(book);
+                    break;
+                }
+            }
+        }
     }
 
     void printBookPublishDate(){
@@ -241,7 +255,19 @@ public class BM3 extends BookManager {
     }
 
     void printSortBookPublishDate(){
-
+        ArrayList<LocalDate> publishDates = new ArrayList<>();
+        for(Book book : bookList){
+            publishDates.add(book.getPublishedDate());
+        }
+        Collections.sort(publishDates);
+        for(LocalDate publishDate : publishDates){
+            for(Book book : bookList){
+                if(publishDate.equals(book.getPublishedDate())) {
+                    printBookForm(book);
+                    break;
+                }
+            }
+        }
     }
 
     @Override

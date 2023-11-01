@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2b044c0-9e5e-43e9-b0eb-1248806b5c8b" name="Changes" comment="Create BM3 printSystem">
+    <list default="true" id="c2b044c0-9e5e-43e9-b0eb-1248806b5c8b" name="Changes" comment="Create BM3 printSystem 1,2,4">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/base/BM3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/BM3.java" afterDir="false" />
     </list>
@@ -67,7 +67,7 @@
       <updated>1698735925180</updated>
       <workItem from="1698735926213" duration="863000" />
       <workItem from="1698797056313" duration="203000" />
-      <workItem from="1698814891765" duration="4318000" />
+      <workItem from="1698814891765" duration="5834000" />
     </task>
     <task id="LOCAL-00001" summary="Make &amp; Check running BM2_Execute">
       <option name="closed" value="true" />
@@ -117,7 +117,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698817919121</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Create BM3 printSystem 1,2,4">
+      <option name="closed" value="true" />
+      <created>1698819407044</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1698819407044</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,6 +150,7 @@
     <MESSAGE value="Create BM3 finish catch Exception" />
     <MESSAGE value="Create BM3 finish catch Exception ver2" />
     <MESSAGE value="Create BM3 printSystem" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create BM3 printSystem" />
+    <MESSAGE value="Create BM3 printSystem 1,2,4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create BM3 printSystem 1,2,4" />
   </component>
 </project>
