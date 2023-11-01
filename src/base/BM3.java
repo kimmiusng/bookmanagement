@@ -208,8 +208,7 @@ public class BM3 extends BookManager {
         name = sc.nextLine();} while (name.isEmpty());
         int count = 0;
         for(Book book : bookList){
-            String check = book.getName().replaceAll(name,"");
-            if(!book.getName().equals(check)){
+            if(book.getName().contains(name)){
                 printBookForm(book);
                 count += 1;
             }
