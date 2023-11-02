@@ -2,10 +2,7 @@ package base;
 
 import java.time.DateTimeException;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Scanner;
+import java.util.*;
 
 public class BM4Interface extends BookManager {
     private BookListDataType bookList = new BookListArrayList();
@@ -201,11 +198,12 @@ public class BM4Interface extends BookManager {
             names.add(bookList.get(key).getName());
         }
         Collections.sort(names);
+        Set<Long> sortKeyset = new HashSet<>(bookList.keySet());
         for(String name : names){
-            for (long key : bookList.keySet()){
+            for (long key : sortKeyset){
                 if(name.equals(bookList.get(key).getName())) {
                     System.out.println(bookList.get(key).toString());
-                    bookList.keySet().remove(key);
+                    sortKeyset.remove(key);
                     break;
                 }
             }
@@ -240,11 +238,12 @@ public class BM4Interface extends BookManager {
             publishDates.add(bookList.get(key).getPublishedDate());
         }
         Collections.sort(publishDates);
+        Set<Long> sortKeyset = new HashSet<>(bookList.keySet());
         for(LocalDate publishDate : publishDates){
-            for (long key : bookList.keySet()){
+            for (long key : sortKeyset){
                 if(publishDate.equals(bookList.get(key).getPublishedDate())) {
                     System.out.println(bookList.get(key).toString());
-                    bookList.keySet().remove(key);
+                    sortKeyset.remove(key);
                     break;
                 }
             }

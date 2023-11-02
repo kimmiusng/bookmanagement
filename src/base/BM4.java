@@ -198,11 +198,12 @@ public class BM4 extends BookManager {
             names.add(bookList.get(key).getName());
         }
         Collections.sort(names);
+        HashMap<Long,Book> bookList2 = (HashMap<Long, Book>) bookList.clone();
         for(String name : names){
-            for (long key : bookList.keySet()){
-                if(name.equals(bookList.get(key).getName())) {
-                    System.out.println(bookList.get(key).toString());
-                    bookList.keySet().remove(key);
+            for (long key : bookList2.keySet()){
+                if(name.equals(bookList2.get(key).getName())) {
+                    System.out.println(bookList2.get(key).toString());
+                    bookList2.keySet().remove(key);
                     break;
                 }
             }
@@ -237,11 +238,12 @@ public class BM4 extends BookManager {
             publishDates.add(bookList.get(key).getPublishedDate());
         }
         Collections.sort(publishDates);
+        HashMap<Long,Book> bookList2 = (HashMap<Long, Book>) bookList.clone();
         for(LocalDate publishDate : publishDates){
-            for (long key : bookList.keySet()){
-                if(publishDate.equals(bookList.get(key).getPublishedDate())) {
-                    System.out.println(bookList.get(key).toString());
-                    bookList.keySet().remove(key);
+            for (long key : bookList2.keySet()){
+                if(publishDate.equals(bookList2.get(key).getPublishedDate())) {
+                    System.out.println(bookList2.get(key).toString());
+                    bookList2.keySet().remove(key);
                     break;
                 }
             }
