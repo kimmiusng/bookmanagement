@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class BM4Interface extends BookManager {
-    private BookListDataType bookList = new BookListHashMap();
+    private BookListDataType bookList = new BookListArrayList();
     static Scanner sc = new Scanner(System.in);
 
     @Override
@@ -205,6 +205,7 @@ public class BM4Interface extends BookManager {
             for (long key : bookList.keySet()){
                 if(name.equals(bookList.get(key).getName())) {
                     System.out.println(bookList.get(key).toString());
+                    bookList.keySet().remove(key);
                     break;
                 }
             }
@@ -243,6 +244,7 @@ public class BM4Interface extends BookManager {
             for (long key : bookList.keySet()){
                 if(publishDate.equals(bookList.get(key).getPublishedDate())) {
                     System.out.println(bookList.get(key).toString());
+                    bookList.keySet().remove(key);
                     break;
                 }
             }
