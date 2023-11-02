@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2b044c0-9e5e-43e9-b0eb-1248806b5c8b" name="Changes" comment="Change Book, Ebook, AudioBook Override toString, HashCode, equals">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/base/BM4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/BM4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base/Execute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/Execute.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
