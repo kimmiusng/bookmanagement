@@ -2,20 +2,21 @@ package base;
 
 import java.time.DateTimeException;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Scanner;
+import java.util.*;
 
 public class BM4 extends BookManager {
-    private ArrayList<Book> bookList = new ArrayList<>();
+    private HashMap<Long,Book> bookList = new HashMap<>();
     static Scanner sc = new Scanner(System.in);
 
     @Override
     void init() {
-        bookList.add(new Book(1L, "돈의 속성(300쇄 리커버에디션)", "김승호", Long.parseLong("9791188331796"), LocalDate.parse("2020-06-15")));
-        bookList.add(new Ebook(2L,"K 배터리 레볼루션", "박순혁", Long.parseLong("9791191521221"), LocalDate.parse("2024-02-20"),"45"));
-        bookList.add(new AudioBook(3L, "위기의 역사", "오건영", Long.parseLong("9791169850360"), LocalDate.parse("2023-07-19"),"567","KOR",3500));
+        bookList.put(1l,new Book(1L, "돈의 속성(300쇄 리커버에디션)", "김승호", Long.parseLong("9791188331796"), LocalDate.parse("2020-06-15")));
+        bookList.put(8l,new Ebook(8L, "돈의 속성(300쇄 리커버에디션)", "김승호", Long.parseLong("9791188331796"), LocalDate.parse("2020-06-15"),"45"));
+        bookList.put(81l,new Ebook(81L, "돈의 속성(300쇄 리커버에디션)", "김승호", Long.parseLong("9791188331796"), LocalDate.parse("2020-06-15"),"45"));
+        bookList.put(7l,new Book(7L, "돈의 속성(300쇄 리커버에디션)", "김승호", Long.parseLong("9791188331796"), LocalDate.parse("2020-06-15")));
+        bookList.put(2l,new Ebook(2L,"K 배터리 레볼루션", "박순혁", Long.parseLong("9791191521221"), LocalDate.parse("2024-02-20"),"45"));
+        bookList.put(3l,new AudioBook(3L, "위기의 역사", "오건영", Long.parseLong("9791169850360"), LocalDate.parse("2023-07-19"),"567","KOR",3500));
+        bookList.put(3l,new Ebook(3L, "위기의 역사", "오건영", Long.parseLong("9791169850360"), LocalDate.parse("2023-07-19"),"75"));
     }
 
     @Override
@@ -103,7 +104,7 @@ public class BM4 extends BookManager {
                     bookInfo[2],
                     Long.parseLong(bookInfo[3]),
                     LocalDate.parse(bookInfo[4]));
-            bookList.add(book);
+            bookList.put(Long.parseLong(bookInfo[0]),book);
         } else if(Integer.parseInt(bookType) == 2){
             book = new Ebook(Long.parseLong(bookInfo[0]),
                     bookInfo[1],
@@ -111,7 +112,7 @@ public class BM4 extends BookManager {
                     Long.parseLong(bookInfo[3]),
                     LocalDate.parse(bookInfo[4]),
                     bookInfo[5]);
-            bookList.add(book);
+            bookList.put(Long.parseLong(bookInfo[0]),book);
         } else {
             book = new AudioBook(Long.parseLong(bookInfo[0]),
                     bookInfo[1],
@@ -121,7 +122,7 @@ public class BM4 extends BookManager {
                     bookInfo[5],
                     bookInfo[6],
                     Integer.parseInt(bookInfo[7]));
-            bookList.add(book);
+            bookList.put(Long.parseLong(bookInfo[0]),book);
         }
     }
 
@@ -133,6 +134,7 @@ public class BM4 extends BookManager {
             System.out.println("(3) 도서 이름 사전순 조회");
             System.out.println("(4) 출간일 기간으로 조회");
             System.out.println("(5) 출간일순 조회");
+            System.out.println("(6) 중복 책 찾기");
             System.out.println("(q) 메뉴 나가기");
             System.out.print("선택 >> ");
             String userInput = sc.nextLine();
@@ -153,6 +155,9 @@ public class BM4 extends BookManager {
                 case "5":
                     printSortBookPublishDate();
                     return;
+                case "6":
+                    printSameBook();
+                    return;
                 case "q":
                     return;
                 default:
@@ -163,8 +168,8 @@ public class BM4 extends BookManager {
 
     @Override
     void printAllBook() {
-        for (Book book : bookList) {
-            System.out.println(book.toString());;
+        for (long key : bookList.keySet()) {
+            System.out.println(bookList.get(key).toString());;
         }
 
     }
@@ -174,9 +179,9 @@ public class BM4 extends BookManager {
         do {System.out.print("검색할 도서의 이름을 입력하세요.: ");
             name = sc.nextLine();} while (name.isEmpty());
         int count = 0;
-        for(Book book : bookList){
-            if(book.getName().contains(name)){
-                System.out.println(book.toString());
+        for (long key : bookList.keySet()){
+            if(bookList.get(key).getName().contains(name)){
+                System.out.println(bookList.get(key).toString());
                 count += 1;
             }
         }
@@ -189,14 +194,14 @@ public class BM4 extends BookManager {
 
     void printSortBookName(){
         ArrayList<String> names = new ArrayList<>();
-        for(Book book : bookList){
-            names.add(book.getName());
+        for (long key : bookList.keySet()){
+            names.add(bookList.get(key).getName());
         }
         Collections.sort(names);
         for(String name : names){
-            for(Book book : bookList){
-                if(name.equals(book.getName())) {
-                    System.out.println(book.toString());
+            for (long key : bookList.keySet()){
+                if(name.equals(bookList.get(key).getName())) {
+                    System.out.println(bookList.get(key).toString());
                     break;
                 }
             }
@@ -212,9 +217,9 @@ public class BM4 extends BookManager {
         do {System.out.print("(YYYY-MM-DD형식으로 입력)까지 : ");
             end = sc.nextLine();} while (!isLocalDate(end));
         int count = 0;
-        for(Book book : bookList){
-            if(book.getPublishedDate().isAfter(LocalDate.parse(start)) && book.getPublishedDate().isBefore(LocalDate.parse(end))){
-                System.out.println(book.toString());
+        for (long key : bookList.keySet()){
+            if(bookList.get(key).getPublishedDate().isAfter(LocalDate.parse(start)) && bookList.get(key).getPublishedDate().isBefore(LocalDate.parse(end))){
+                System.out.println(bookList.get(key).toString());
                 count += 1;
             }
         }
@@ -227,18 +232,36 @@ public class BM4 extends BookManager {
 
     void printSortBookPublishDate(){
         ArrayList<LocalDate> publishDates = new ArrayList<>();
-        for(Book book : bookList){
-            publishDates.add(book.getPublishedDate());
+        for (long key : bookList.keySet()){
+            publishDates.add(bookList.get(key).getPublishedDate());
         }
         Collections.sort(publishDates);
         for(LocalDate publishDate : publishDates){
-            for(Book book : bookList){
-                if(publishDate.equals(book.getPublishedDate())) {
-                    System.out.println(book.toString());
+            for (long key : bookList.keySet()){
+                if(publishDate.equals(bookList.get(key).getPublishedDate())) {
+                    System.out.println(bookList.get(key).toString());
                     break;
                 }
             }
         }
+    }
+
+    void printSameBook(){
+        int count = 0;
+        for(long key : bookList.keySet()){
+            boolean check = false;
+            for(long find : bookList.keySet()){
+                if(key != find && bookList.get(key).equals(bookList.get(find))){
+                    check = true;
+                    break;
+                }
+            }
+            if(check){
+                System.out.println(bookList.get(key).toString());
+                count++;
+            }
+        }
+        System.out.println("중복된 책의 갯수 : " + count);
     }
 
     @Override
@@ -318,9 +341,9 @@ public class BM4 extends BookManager {
     }
 
     public Book findBook(long id) {
-        for (Book book : bookList) {
-            if (id == book.getId()) {
-                return book;
+        for (long key : bookList.keySet()) {
+            if (id == bookList.get(key).getId()) {
+                return bookList.get(key);
             }
         }
         // bookList를 다 돌았는데 해당 id의 도서를 못찾았다.

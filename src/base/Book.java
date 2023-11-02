@@ -38,7 +38,7 @@ public class Book {
         return obj instanceof Book &&
                 this.name.equals(((Book) obj).getName()) &&
                 this.author.equals(((Book) obj).getAuthor()) &&
-                this.isbn == ((Book) obj).getIsbn();
+                this.isbn.equals(((Book) obj).getIsbn());
     }
 
     public Book() {

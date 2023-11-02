@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2b044c0-9e5e-43e9-b0eb-1248806b5c8b" name="Changes" comment="Create BM3 printSystem finish ver5">
-      <change afterPath="$PROJECT_DIR$/src/base/BM4.java" afterDir="false" />
+    <list default="true" id="c2b044c0-9e5e-43e9-b0eb-1248806b5c8b" name="Changes" comment="Change Book, Ebook, AudioBook Override toString, HashCode, equals">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base/AudioBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/AudioBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/BM4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/BM4.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/base/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base/Ebook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/Ebook.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/base/Execute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/Execute.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -81,7 +79,7 @@
       <workItem from="1698882708565" duration="128000" />
       <workItem from="1698909791007" duration="904000" />
       <workItem from="1698910744523" duration="1181000" />
-      <workItem from="1698912049663" duration="375000" />
+      <workItem from="1698912049663" duration="2675000" />
     </task>
     <task id="LOCAL-00001" summary="Make &amp; Check running BM2_Execute">
       <option name="closed" value="true" />
@@ -179,7 +177,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698882829368</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Change Book, Ebook, AudioBook Override toString, HashCode, equals">
+      <option name="closed" value="true" />
+      <created>1698912529907</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1698912529907</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,6 +228,7 @@
     <MESSAGE value="Create BM3 printSystem finish ver3" />
     <MESSAGE value="Create BM3 printSystem finish ver4" />
     <MESSAGE value="Create BM3 printSystem finish ver5" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create BM3 printSystem finish ver5" />
+    <MESSAGE value="Change Book, Ebook, AudioBook Override toString, HashCode, equals" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change Book, Ebook, AudioBook Override toString, HashCode, equals" />
   </component>
 </project>
