@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2b044c0-9e5e-43e9-b0eb-1248806b5c8b" name="Changes" comment="Create BM3 printSystem finish ver4">
+    <list default="true" id="c2b044c0-9e5e-43e9-b0eb-1248806b5c8b" name="Changes" comment="Create BM3 printSystem finish ver5">
+      <change afterPath="$PROJECT_DIR$/src/base/BM4.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/AudioBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/AudioBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/Ebook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/Ebook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/Execute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/Execute.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +78,10 @@
       <workItem from="1698735926213" duration="863000" />
       <workItem from="1698797056313" duration="203000" />
       <workItem from="1698814891765" duration="9535000" />
+      <workItem from="1698882708565" duration="128000" />
+      <workItem from="1698909791007" duration="904000" />
+      <workItem from="1698910744523" duration="1181000" />
+      <workItem from="1698912049663" duration="375000" />
     </task>
     <task id="LOCAL-00001" summary="Make &amp; Check running BM2_Execute">
       <option name="closed" value="true" />
@@ -162,7 +171,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698824181217</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Create BM3 printSystem finish ver5">
+      <option name="closed" value="true" />
+      <created>1698882829368</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1698882829368</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,7 +190,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -192,6 +221,7 @@
     <MESSAGE value="Create BM3 printSystem finish ver2" />
     <MESSAGE value="Create BM3 printSystem finish ver3" />
     <MESSAGE value="Create BM3 printSystem finish ver4" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create BM3 printSystem finish ver4" />
+    <MESSAGE value="Create BM3 printSystem finish ver5" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create BM3 printSystem finish ver5" />
   </component>
 </project>
