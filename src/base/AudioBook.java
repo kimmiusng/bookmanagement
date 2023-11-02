@@ -7,8 +7,10 @@ public class AudioBook extends Book {
     String language;
     int playTime;
 
-    public AudioBook(){}
-    public AudioBook(Long id, String name, String author, Long isbn, LocalDate publishedDate, String fileSize, String language, int playTime){
+    public AudioBook() {
+    }
+
+    public AudioBook(Long id, String name, String author, Long isbn, LocalDate publishedDate, String fileSize, String language, int playTime) {
         super(id, name, author, isbn, publishedDate);
         this.fileSize = fileSize;
         this.language = language;
@@ -38,4 +40,24 @@ public class AudioBook extends Book {
     public void setPlayTime(int playtime) {
         this.playTime = playtime;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\t"
+                + fileSize + "mb"
+                + language + "\t"
+                + playTime + "초";
+    }
+
+    @Override
+    public int hashCode() {
+        return "Audiobook".hashCode() + super.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return obj instanceof AudioBook && super.equals(obj);
+    }
+
+
 }

@@ -21,6 +21,30 @@ public class Book {
 
     }
 
+    @Override
+    public String toString() {
+        return this.getClass().getSimpleName() + "\t"
+                +this.id + "\t"
+                +this.name + "\t"
+                +this.author + "\t"
+                +this.isbn + "\t"
+                +this.publishedDate + "\t"
+
+    }
+
+    @Override
+    public int hashCode() {
+        return this.name.hashCode() + this.author.hashCode() + (int)(Math.sqrt(this.isbn));
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return obj instanceof Book &&
+                this.name.equals(((Book)obj).getName()) &&
+                this.author.equals(((Book)obj).getName()) &&
+                this.isbn.equals(((Book)obj).getId());
+    }
+
     public Long getId() {
         return id;
     }
