@@ -1,12 +1,13 @@
-package base;
+package base.BookListDataType;
+
+import base.Book;
 
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Set;
 
 public class BookListHashMap implements BookListDataType{
 
-    private HashMap<Long,Book> bookList = new HashMap<>();
+    private HashMap<Long, Book> bookList = new HashMap<>();
 
     public BookListHashMap(){}
     @Override

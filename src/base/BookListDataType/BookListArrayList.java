@@ -1,4 +1,6 @@
-package base;
+package base.BookListDataType;
+
+import base.Book;
 
 import java.util.ArrayList;
 import java.util.HashSet;
