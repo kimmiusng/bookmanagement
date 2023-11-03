@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2b044c0-9e5e-43e9-b0eb-1248806b5c8b" name="Changes" comment="BM5 ver1&#10;+ BookHashMap, BookRepository ,BM5&#10;+ Create Package">
+    <list default="true" id="c2b044c0-9e5e-43e9-b0eb-1248806b5c8b" name="Changes" comment="BM5 ver2&#10;+ fix printSameBook">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base/BM5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/BM5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/Execute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/Execute.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +61,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -78,7 +80,10 @@
       <workItem from="1698909791007" duration="904000" />
       <workItem from="1698910744523" duration="1181000" />
       <workItem from="1698912049663" duration="2675000" />
-      <workItem from="1699008947071" duration="9723000" />
+      <workItem from="1699008947071" duration="11542000" />
+      <workItem from="1699020630353" duration="759000" />
+      <workItem from="1699021450030" duration="89000" />
+      <workItem from="1699021593042" duration="114000" />
     </task>
     <task id="LOCAL-00001" summary="Make &amp; Check running BM2_Execute">
       <option name="closed" value="true" />
@@ -192,7 +197,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699018037700</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="BM5 ver2&#10;+ fix printSameBook">
+      <option name="closed" value="true" />
+      <created>1699018857292</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1699018857292</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,6 +238,11 @@
     <MESSAGE value="Create BM3 printSystem finish ver5" />
     <MESSAGE value="Change Book, Ebook, AudioBook Override toString, HashCode, equals" />
     <MESSAGE value="BM5 ver1&#10;+ BookHashMap, BookRepository ,BM5&#10;+ Create Package" />
-    <option name="LAST_COMMIT_MESSAGE" value="BM5 ver1&#10;+ BookHashMap, BookRepository ,BM5&#10;+ Create Package" />
+    <MESSAGE value="BM5 ver2&#10;+ fix printSameBook" />
+    <option name="LAST_COMMIT_MESSAGE" value="BM5 ver2&#10;+ fix printSameBook" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

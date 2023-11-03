@@ -1,5 +1,7 @@
 package base;
 
+import java.io.UnsupportedEncodingException;
+import java.rmi.UnexpectedException;
 import java.time.LocalDate;
 
 public class Book {
@@ -20,12 +22,16 @@ public class Book {
 
     @Override
     public String toString() {
-        return this.getClass().getSimpleName() + "\t"
-                + this.id  + "\t"
-                + this.name + "\t"
-                + this.author + "\t"
-                + this.isbn + "\t"
-                + this.publishedDate;
+        try {
+            return String.format("%-15s",this.getClass().getSimpleName())
+                    + String.format("%-5d",this.id)
+                    + String.format("%-" + (35 - this.name.getBytes("euc-kr").length + this.name.length()) + "s",this.name)
+                    + String.format("%-8s",this.author)
+                    + String.format("%-15d",this.isbn) + "\t"
+                    + this.publishedDate;
+        } catch (UnsupportedEncodingException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
