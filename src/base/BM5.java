@@ -12,12 +12,15 @@ public class BM5 extends BookManager{
     @Override
     void init() {
         bookList.addBook(new Book(1L, "돈의 속성(300쇄 리커버에디션)", "김승호", Long.parseLong("9791188331796"), LocalDate.parse("2020-06-15")));
-        bookList.addBook(new Ebook(8L, "돈의 속성(300쇄 리커버에디션)", "김승호", Long.parseLong("9791188331796"), LocalDate.parse("2020-06-15"),"45"));
-        bookList.addBook(new Ebook(81L, "돈의 속성(300쇄 리커버에디션)", "김승호", Long.parseLong("9791188331796"), LocalDate.parse("2020-06-15"),"45"));
-        bookList.addBook(new Book(7L, "돈의 속성(300쇄 리커버에디션)", "김승호", Long.parseLong("9791188331796"), LocalDate.parse("2020-06-15")));
-        bookList.addBook(new Ebook(2L,"K 배터리 레볼루션", "박순혁", Long.parseLong("9791191521221"), LocalDate.parse("2024-02-20"),"45"));
-        bookList.addBook(new AudioBook(3L, "위기의 역사", "오건영", Long.parseLong("9791169850360"), LocalDate.parse("2023-07-19"),"567","KOR",3500));
-        bookList.addBook(new Ebook(3L, "위기의 역사", "오건영", Long.parseLong("9791169850360"), LocalDate.parse("2023-07-19"),"75"));
+        bookList.addBook(new Ebook(2L, "돈의 속성(300쇄 리커버에디션)", "김승호", Long.parseLong("9791188331796"), LocalDate.parse("2020-06-15"),"45"));
+        bookList.addBook(new Book(3L,"K 배터리 레볼루션", "박순혁", Long.parseLong("9791191521221"), LocalDate.parse("2024-02-20")));
+        bookList.addBook(new Book(4L, "위기의 역사", "오건영", Long.parseLong("9791169850360"), LocalDate.parse("2023-07-19")));
+        bookList.addBook(new AudioBook(5L, "오라클", "서진수", Long.parseLong("33417232496"), LocalDate.parse("2019-03-04"),"87","KOR",Integer.parseInt("5556")));
+        bookList.addBook(new Book(6L, "돈의 속성(300쇄 리커버에디션)", "김승호", Long.parseLong("9791188331796"), LocalDate.parse("2020-06-15")));
+        bookList.addBook(new Ebook(7L, "돈의 속성(300쇄 리커버에디션)", "김승호", Long.parseLong("9791188331796"), LocalDate.parse("2020-06-15"),"45"));
+        bookList.addBook(new Book(8L,"K 배터리 레볼루션", "박순혁", Long.parseLong("9791191521221"), LocalDate.parse("2024-02-20")));
+        bookList.addBook(new Book(9L, "위기의 역사", "오건영", Long.parseLong("9791169850360"), LocalDate.parse("2023-07-19")));
+        bookList.addBook(new AudioBook(10L, "오라클", "서진수", Long.parseLong("33417232496"), LocalDate.parse("2019-03-04"),"87","KOR",Integer.parseInt("5556")));
     }
 
     @Override
@@ -292,10 +295,9 @@ public class BM5 extends BookManager{
 
     public void printSameBook(){
         int count = 0;
-        int i = 0;
         List<Book> bookList1 = new ArrayList<>(bookList.getBooks());
-        while(bookList1.size() > i) {
-            Book book1 = bookList1.get(i);
+        while(!bookList1.isEmpty()) {
+            Book book1 = bookList1.get(0);
             if(bookList.getBooks(book -> book.hashCode() == book1.hashCode()).size() != 1){
                 System.out.println("-----------------------------------------------");
                 for(Book book2 : bookList.getBooks(book -> book.hashCode() == book1.hashCode())){
@@ -304,7 +306,7 @@ public class BM5 extends BookManager{
                 }
                 count += 1;
             }
-            i++;
+            bookList1.remove(book1);
         }
         System.out.println("-----------------------------------------------");
         System.out.println("중복된 책의 수 : " + count);
