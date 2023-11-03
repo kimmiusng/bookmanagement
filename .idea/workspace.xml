@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2b044c0-9e5e-43e9-b0eb-1248806b5c8b" name="Changes" comment="Make &amp; Check running BM2_Execute ver2">
+    <list default="true" id="c2b044c0-9e5e-43e9-b0eb-1248806b5c8b" name="Changes" comment="BM4Interface 구현">
+      <change afterPath="$PROJECT_DIR$/src/base/BM5.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/base/BookRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base/BM4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/BM4.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/base/BM4Interface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/BM4Interface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base/Execute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/Execute.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +68,11 @@
       <option name="presentableId" value="Default" />
       <updated>1698735925180</updated>
       <workItem from="1698735926213" duration="863000" />
+      <workItem from="1698973624773" duration="11000" />
+      <workItem from="1698985633352" duration="35000" />
+      <workItem from="1698985962719" duration="465000" />
+      <workItem from="1698986910092" duration="178000" />
+      <workItem from="1698999717402" duration="1127000" />
     </task>
     <task id="LOCAL-00001" summary="Make &amp; Check running BM2_Execute">
       <option name="closed" value="true" />
@@ -121,15 +126,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Make &amp; Check running BM2_Execute ver2" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/base/Execute.java</url>
-          <line>10</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="((HashMap)((BM4)this).bookList).entrySet().toArray()[2]" custom="java.util.HashMap,base.BM4" />

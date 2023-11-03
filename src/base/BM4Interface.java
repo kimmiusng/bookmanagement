@@ -5,7 +5,7 @@ import java.time.LocalDate;
 import java.util.*;
 
 public class BM4Interface extends BookManager {
-    private BookListDataType bookList = new BookListArrayList();
+    private BookListDataType bookList = new BookListHashMap();
     static Scanner sc = new Scanner(System.in);
 
     @Override
@@ -252,6 +252,7 @@ public class BM4Interface extends BookManager {
 
     void printSameBook(){
         int count = 0;
+
         for(long key : bookList.keySet()){
             boolean check = false;
             for(long find : bookList.keySet()){
@@ -266,6 +267,8 @@ public class BM4Interface extends BookManager {
             }
         }
         System.out.println("중복된 책의 갯수 : " + count);
+
+
     }
 
     @Override
