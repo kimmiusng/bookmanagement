@@ -10,7 +10,6 @@ import base.BookRepository.*;
 
 public class BM6 extends BookManager {
     private BookRepository bookList = new BookHashMap();
-
     static Scanner sc = new Scanner(System.in);
     @Override
     public void init(){
@@ -333,32 +332,24 @@ public class BM6 extends BookManager {
     }
 
     public void backUpSystem() {
-        ObjectOutputStream bookOutput = null;
-        ObjectInputStream bookInput = null;
-        try {
-            bookOutput = new ObjectOutputStream(new FileOutputStream("C:/Users/kitri/IdeaProjects/book-manager2/books.backup.txt"));
-            bookInput = new ObjectInputStream(new FileInputStream("C:/Users/kitri/IdeaProjects/book-manager2/books.txt"));
-        } catch (Exception e){
-            System.out.println("파일을 찾지 못했습니다.");
-        }
-        ObjectOutputStream finalBookOutput = bookOutput;
-        ObjectInputStream finalBookInput = bookInput;
         Thread thread = new Thread(() -> {
             while (true){
                 try {
-                    BookRepository bookBackUp = (BookRepository) finalBookInput.readObject();
-                    finalBookOutput.writeObject(bookBackUp);
-                    finalBookOutput.flush();
-                    finalBookInput.close();
-                    finalBookOutput.close();
+                    ObjectOutputStream bookOutput = new ObjectOutputStream(new FileOutputStream("C:/Users/kitri/IdeaProjects/book-manager2/books.backup.txt"));
+                    ObjectInputStream bookInput = new ObjectInputStream(new FileInputStream("C:/Users/kitri/IdeaProjects/book-manager2/books.txt"));
+                    BookRepository bookBackUp = (BookRepository) bookInput.readObject();
+                    bookOutput.writeObject(bookBackUp);
                     Thread.sleep(10000);
-                } catch (IOException | ClassNotFoundException | InterruptedException e ) {
-                    backUpSystem();
+                    bookInput.close();
+                } catch (Exception e) {
+                    throw new RuntimeException(e);
                 }
 
             }
         });
-        thread.start();
         thread.setDaemon(true);
+        thread.start();
     }
 }
+
+
