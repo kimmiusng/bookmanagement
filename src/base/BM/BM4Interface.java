@@ -1,7 +1,6 @@
 package base.BM;
 
-import base.Book.Book;
-import base.Book.Ebook;
+import base.Book.*;
 import base.BookListDataType.BookListDataType;
 import base.BookListDataType.BookListHashMap;
 

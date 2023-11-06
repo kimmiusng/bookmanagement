@@ -1,7 +1,7 @@
 package base.BM;
 
-import base.Book.Book;
-import base.Book.Ebook;
+import base.Book.*;
+
 
 import java.time.LocalDate;
 import java.util.ArrayList;
