@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2b044c0-9e5e-43e9-b0eb-1248806b5c8b" name="Changes" comment="BM5 ver2&#10;+ fix printSameBook">
+    <list default="true" id="c2b044c0-9e5e-43e9-b0eb-1248806b5c8b" name="Changes" comment="BM5 base">
+      <change afterPath="$PROJECT_DIR$/src/base/BookRepository/BookArrayList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base/Execute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/Execute.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/BM5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/BM5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/BookRepository/BookHashMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/BookRepository/BookHashMap.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,16 +25,10 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="songjunhyung" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/base/BM3.java" root0="SKIP_INSPECTION" />
-  </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -47,24 +42,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "songjunhyung",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;songjunhyung&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -74,16 +69,12 @@
       <option name="presentableId" value="Default" />
       <updated>1698735925180</updated>
       <workItem from="1698735926213" duration="863000" />
-      <workItem from="1698797056313" duration="203000" />
-      <workItem from="1698814891765" duration="9535000" />
-      <workItem from="1698882708565" duration="128000" />
-      <workItem from="1698909791007" duration="904000" />
-      <workItem from="1698910744523" duration="1181000" />
-      <workItem from="1698912049663" duration="2675000" />
-      <workItem from="1699008947071" duration="11542000" />
-      <workItem from="1699020630353" duration="759000" />
-      <workItem from="1699021450030" duration="89000" />
-      <workItem from="1699021593042" duration="114000" />
+      <workItem from="1698973624773" duration="11000" />
+      <workItem from="1698985633352" duration="35000" />
+      <workItem from="1698985962719" duration="465000" />
+      <workItem from="1698986910092" duration="178000" />
+      <workItem from="1698999717402" duration="1127000" />
+      <workItem from="1699231215536" duration="1005000" />
     </task>
     <task id="LOCAL-00001" summary="Make &amp; Check running BM2_Execute">
       <option name="closed" value="true" />
@@ -101,111 +92,7 @@
       <option name="project" value="LOCAL" />
       <updated>1698741104272</updated>
     </task>
-    <task id="LOCAL-00003" summary="Create BM3 + islong , isLocalDate">
-      <option name="closed" value="true" />
-      <created>1698816144389</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1698816144389</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Create BM3 finish catch Exception">
-      <option name="closed" value="true" />
-      <created>1698816719102</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1698816719102</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Create BM3 finish catch Exception ver2">
-      <option name="closed" value="true" />
-      <created>1698816997477</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1698816997477</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Create BM3 printSystem">
-      <option name="closed" value="true" />
-      <created>1698817919121</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1698817919121</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Create BM3 printSystem 1,2,4">
-      <option name="closed" value="true" />
-      <created>1698819407044</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1698819407044</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Create BM3 printSystem finish">
-      <option name="closed" value="true" />
-      <created>1698821057866</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1698821057866</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Create BM3 printSystem finish ver2">
-      <option name="closed" value="true" />
-      <created>1698823451499</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1698823451499</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Create BM3 printSystem finish ver3">
-      <option name="closed" value="true" />
-      <created>1698824052413</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1698824052413</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Create BM3 printSystem finish ver4">
-      <option name="closed" value="true" />
-      <created>1698824181217</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1698824181217</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Create BM3 printSystem finish ver5">
-      <option name="closed" value="true" />
-      <created>1698882829368</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1698882829368</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Change Book, Ebook, AudioBook Override toString, HashCode, equals">
-      <option name="closed" value="true" />
-      <created>1698912529907</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1698912529907</updated>
-    </task>
-    <task id="LOCAL-00014" summary="BM5 ver1&#10;+ BookHashMap, BookRepository ,BM5&#10;+ Create Package">
-      <option name="closed" value="true" />
-      <created>1699018037700</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1699018037700</updated>
-    </task>
-    <task id="LOCAL-00015" summary="BM5 ver2&#10;+ fix printSameBook">
-      <option name="closed" value="true" />
-      <created>1699018857292</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1699018857292</updated>
-    </task>
-    <option name="localTasksCounter" value="16" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,20 +113,14 @@
     <MESSAGE value="Base Code" />
     <MESSAGE value="Make &amp; Check running BM2_Execute" />
     <MESSAGE value="Make &amp; Check running BM2_Execute ver2" />
-    <MESSAGE value="Create BM3 + islong , isLocalDate" />
-    <MESSAGE value="Create BM3 finish catch Exception" />
-    <MESSAGE value="Create BM3 finish catch Exception ver2" />
-    <MESSAGE value="Create BM3 printSystem" />
-    <MESSAGE value="Create BM3 printSystem 1,2,4" />
-    <MESSAGE value="Create BM3 printSystem finish" />
-    <MESSAGE value="Create BM3 printSystem finish ver2" />
-    <MESSAGE value="Create BM3 printSystem finish ver3" />
-    <MESSAGE value="Create BM3 printSystem finish ver4" />
-    <MESSAGE value="Create BM3 printSystem finish ver5" />
-    <MESSAGE value="Change Book, Ebook, AudioBook Override toString, HashCode, equals" />
-    <MESSAGE value="BM5 ver1&#10;+ BookHashMap, BookRepository ,BM5&#10;+ Create Package" />
-    <MESSAGE value="BM5 ver2&#10;+ fix printSameBook" />
-    <option name="LAST_COMMIT_MESSAGE" value="BM5 ver2&#10;+ fix printSameBook" />
+    <option name="LAST_COMMIT_MESSAGE" value="Make &amp; Check running BM2_Execute ver2" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="((HashMap)((BM4)this).bookList).entrySet().toArray()[2]" custom="java.util.HashMap,base.BM4" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

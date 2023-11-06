@@ -5,8 +5,19 @@ import base.Book;
 import java.util.*;
 import java.util.function.Predicate;
 
-public class BookHashMap implements BookRepository{
-    private HashMap<Long,Book> bookList = new HashMap<>();
+public class BookHashMap implements BookRepository {
+    private HashMap<Long, Book> bookList = new HashMap<>();
+
+    @Override
+    public void addBook(Book book){
+        bookList.put(book.getId(),book);
+    }
+
+    @Override
+    public void removeBook(Book book){
+        bookList.remove(book.getId());
+    }
+
     @Override
     public Book getBook(Long id) {
         return bookList.get(id);
@@ -28,15 +39,5 @@ public class BookHashMap implements BookRepository{
         List<Book> bookList1 = new ArrayList<>(bookList.values());
         bookList1.sort(comparator);
         return bookList1;
-    }
-
-    @Override
-    public void addBook(Book book){
-        bookList.put(book.getId(),book);
-    }
-
-    @Override
-    public void removeBook(Book book){
-        bookList.remove(book.getId());
     }
 }
