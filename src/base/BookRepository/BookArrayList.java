@@ -1,6 +1,6 @@
 package base.BookRepository;
 
-import base.Book;
+import base.Book.Book;
 
 import java.util.ArrayList;
 import java.util.Comparator;

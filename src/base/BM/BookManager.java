@@ -1,9 +1,9 @@
-package base;
+package base.BM;
 
 
 public abstract class BookManager {
-    abstract void init();
-    abstract void interactWithUser();
+    public abstract void init();
+    public abstract void interactWithUser();
     abstract void addBook();
     abstract void printAllBook();
     abstract void updateBook();

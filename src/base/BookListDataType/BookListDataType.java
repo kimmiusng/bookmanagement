@@ -1,9 +1,7 @@
 package base.BookListDataType;
 
-import base.Book;
+import base.Book.Book;
 
-import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Set;
 
 public interface BookListDataType {

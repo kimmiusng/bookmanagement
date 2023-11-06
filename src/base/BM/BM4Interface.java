@@ -1,5 +1,7 @@
-package base;
+package base.BM;
 
+import base.Book.Book;
+import base.Book.Ebook;
 import base.BookListDataType.BookListDataType;
 import base.BookListDataType.BookListHashMap;
 
@@ -12,7 +14,7 @@ public class BM4Interface extends BookManager {
     static Scanner sc = new Scanner(System.in);
 
     @Override
-    void init() {
+    public void init() {
         bookList.add(new Book(1L, "돈의 속성(300쇄 리커버에디션)", "김승호", Long.parseLong("9791188331796"), LocalDate.parse("2020-06-15")));
         bookList.add(new Ebook(8L, "돈의 속성(300쇄 리커버에디션)", "김승호", Long.parseLong("9791188331796"), LocalDate.parse("2020-06-15"),"45"));
         bookList.add(new Ebook(81L, "돈의 속성(300쇄 리커버에디션)", "김승호", Long.parseLong("9791188331796"), LocalDate.parse("2020-06-15"),"45"));
@@ -23,7 +25,7 @@ public class BM4Interface extends BookManager {
     }
 
     @Override
-    void interactWithUser() {
+    public void interactWithUser() {
         while (true) {
             System.out.println("■■■■■■ 도서 관리 프로그램 ■■■■■■");
             System.out.println("(1) 도서 조회");

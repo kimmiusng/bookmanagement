@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2b044c0-9e5e-43e9-b0eb-1248806b5c8b" name="Changes" comment="BM5 + BookArrayList">
+    <list default="true" id="c2b044c0-9e5e-43e9-b0eb-1248806b5c8b" name="Changes" comment="BM5 + 목차">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base/AudioBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/AudioBook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base/BM5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/BM5.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base/Ebook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/Ebook.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +71,7 @@
       <workItem from="1698985962719" duration="465000" />
       <workItem from="1698986910092" duration="178000" />
       <workItem from="1698999717402" duration="1127000" />
-      <workItem from="1699231215536" duration="2481000" />
+      <workItem from="1699231215536" duration="5380000" />
     </task>
     <task id="LOCAL-00001" summary="Make &amp; Check running BM2_Execute">
       <option name="closed" value="true" />
@@ -101,7 +97,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699232288786</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="BM5 + 목차">
+      <option name="closed" value="true" />
+      <created>1699233934229</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1699233934229</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,7 +139,8 @@
     <MESSAGE value="Make &amp; Check running BM2_Execute" />
     <MESSAGE value="Make &amp; Check running BM2_Execute ver2" />
     <MESSAGE value="BM5 + BookArrayList" />
-    <option name="LAST_COMMIT_MESSAGE" value="BM5 + BookArrayList" />
+    <MESSAGE value="BM5 + 목차" />
+    <option name="LAST_COMMIT_MESSAGE" value="BM5 + 목차" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
