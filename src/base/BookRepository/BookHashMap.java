@@ -2,10 +2,11 @@ package base.BookRepository;
 
 import base.Book.Book;
 
+import java.io.Serializable;
 import java.util.*;
 import java.util.function.Predicate;
 
-public class BookHashMap implements BookRepository {
+public class BookHashMap implements BookRepository, Serializable{
     private HashMap<Long, Book> bookList = new HashMap<>();
 
     @Override

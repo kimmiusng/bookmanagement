@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2b044c0-9e5e-43e9-b0eb-1248806b5c8b" name="Changes" comment="BM5 + 패키징">
-      <change afterPath="$PROJECT_DIR$/src/base/BM/BM5_1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/base/BM/BM6.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base/BM/BM5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/BM/BM5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/BM/BookManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/BM/BookManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/Book/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/Book/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/BookRepository/BookHashMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/BookRepository/BookHashMap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/base/Execute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/Execute.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,6 +62,26 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration name="Execute" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="base.Execute" />
+      <module name="book-manager2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="base.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Execute" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -76,7 +98,8 @@
       <workItem from="1698999717402" duration="1127000" />
       <workItem from="1699231215536" duration="7025000" />
       <workItem from="1699245244991" duration="117000" />
-      <workItem from="1699246904556" duration="790000" />
+      <workItem from="1699246904556" duration="1144000" />
+      <workItem from="1699257770686" duration="4629000" />
     </task>
     <task id="LOCAL-00001" summary="Make &amp; Check running BM2_Execute">
       <option name="closed" value="true" />
@@ -118,7 +141,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699237745785</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="BM5 + 패키징">
+      <option name="closed" value="true" />
+      <created>1699248033644</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1699248033644</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,19 +160,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="origin/songjunhyung" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -157,6 +176,19 @@
     <option name="LAST_COMMIT_MESSAGE" value="BM5 + 패키징" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/base/Execute.java</url>
+          <line>7</line>
+          <properties class="base.Execute" method="main">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="((HashMap)((BM4)this).bookList).entrySet().toArray()[2]" custom="java.util.HashMap,base.BM4" />

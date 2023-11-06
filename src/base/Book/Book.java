@@ -1,9 +1,10 @@
 package base.Book;
 
+import java.io.Serializable;
 import java.io.UnsupportedEncodingException;
 import java.time.LocalDate;
 
-public class Book {
+public class Book implements Serializable {
     private Long id;
     private String name;
     private String author;
