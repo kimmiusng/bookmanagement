@@ -41,9 +41,9 @@ public class AudioBook extends Book {
 
     @Override
     public String toString() {
-        return super.toString() + "\t"
-                + fileSize + "mb\t"
-                + language + "\t"
+        return super.toString()
+                + String.format("%-11s",fileSize + "mb")
+                + String.format("%-10s",language)
                 + playTime + "초";
     }
 

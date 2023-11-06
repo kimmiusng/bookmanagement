@@ -23,8 +23,8 @@ public class Ebook extends Book{
 
     @Override
     public String toString() {
-        return super.toString() + "\t"
-                + fileSize + "mb";
+        return super.toString()
+                + String.format("%-11s",fileSize + "mb");
     }
 
     @Override

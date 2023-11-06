@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2b044c0-9e5e-43e9-b0eb-1248806b5c8b" name="Changes" comment="BM5 base">
-      <change afterPath="$PROJECT_DIR$/src/base/BookRepository/BookArrayList.java" afterDir="false" />
+    <list default="true" id="c2b044c0-9e5e-43e9-b0eb-1248806b5c8b" name="Changes" comment="BM5 + BookArrayList">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/AudioBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/AudioBook.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/base/BM5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/BM5.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base/BookRepository/BookHashMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/BookRepository/BookHashMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/Ebook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/Ebook.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +75,7 @@
       <workItem from="1698985962719" duration="465000" />
       <workItem from="1698986910092" duration="178000" />
       <workItem from="1698999717402" duration="1127000" />
-      <workItem from="1699231215536" duration="1005000" />
+      <workItem from="1699231215536" duration="2481000" />
     </task>
     <task id="LOCAL-00001" summary="Make &amp; Check running BM2_Execute">
       <option name="closed" value="true" />
@@ -92,7 +93,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698741104272</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="BM5 + BookArrayList">
+      <option name="closed" value="true" />
+      <created>1699232288786</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1699232288786</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -103,7 +112,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/songjunhyung" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -113,7 +134,8 @@
     <MESSAGE value="Base Code" />
     <MESSAGE value="Make &amp; Check running BM2_Execute" />
     <MESSAGE value="Make &amp; Check running BM2_Execute ver2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Make &amp; Check running BM2_Execute ver2" />
+    <MESSAGE value="BM5 + BookArrayList" />
+    <option name="LAST_COMMIT_MESSAGE" value="BM5 + BookArrayList" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

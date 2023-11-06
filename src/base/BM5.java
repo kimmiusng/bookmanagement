@@ -254,6 +254,8 @@ public class BM5 extends BookManager{
             System.out.println("조회할 수 있는 도서가 없습니다.");
             return;
         }
+        System.out.printf("%-15s%-5s%-35s%-12s%-20s%-14s%-11s%-10s%-10s","Book Type","ID","NAME","Author","ISBN","Publish Date","File Size", "Langauge", "Runnig Time");
+        System.out.println("\n-------------------------------------------------------------------------------------------------------------------------------------");
         for(Book book : printBookList){
             System.out.println(book.toString());
         }
@@ -299,16 +301,17 @@ public class BM5 extends BookManager{
         while(!bookList1.isEmpty()) {
             Book book1 = bookList1.get(0);
             if(bookList.getBooks(book -> book.hashCode() == book1.hashCode()).size() != 1){
-                System.out.println("-----------------------------------------------");
+                System.out.printf("%-15s%-5s%-35s%-12s%-20s%-14s%-11s%-10s%-10s","Book Type","ID","NAME","Author","ISBN","Publish Date","File Size", "Langauge", "Runnig Time");
+                System.out.println("\n-------------------------------------------------------------------------------------------------------------------------------------");
                 for(Book book2 : bookList.getBooks(book -> book.hashCode() == book1.hashCode())){
                     System.out.println(book2.toString());
                     bookList1.remove(book2);
                 }
+                System.out.println("\n-------------------------------------------------------------------------------------------------------------------------------------");
                 count += 1;
             }
             bookList1.remove(book1);
         }
-        System.out.println("-----------------------------------------------");
         System.out.println("중복된 책의 수 : " + count);
     }
 }
