@@ -11,6 +11,7 @@ import base.BookRepository.*;
 public class BM6 extends BookManager {
     private BookRepository bookList = new BookHashMap();
     static Scanner sc = new Scanner(System.in);
+    private boolean change = false;
     @Override
     public void init(){
         ObjectInputStream bookInput = null;
@@ -26,6 +27,7 @@ public class BM6 extends BookManager {
     @Override
     public void interactWithUser() {
         backUpSystem();
+        autoSaveSystem();
         while (true) {
             System.out.println("■■■■■■ 도서 관리 프로그램 ■■■■■■");
             System.out.println("(1) 도서 조회");
@@ -40,21 +42,24 @@ public class BM6 extends BookManager {
                 case "1":
                     // 조회
                     printAllBook();
-                    save();
                     break;
                 case "2":
                     // 등록
                     addBook();
+                    //save();
+                    change = true;
                     break;
                 case "3":
                     // 수정
                     updateBook();
-                    save();
+                    //save();
+                    change = true;
                     break;
                 case "4":
                     // 삭제
                     removeBook();
-                    save();
+                    //save();
+                    change = true;
                     break;
                 case "q":
                     // 메소드를 종료
@@ -341,6 +346,28 @@ public class BM6 extends BookManager {
                     bookOutput.writeObject(bookBackUp);
                     Thread.sleep(10000);
                     bookInput.close();
+                } catch (Exception e) {
+                    throw new RuntimeException(e);
+                }
+
+            }
+        });
+        thread.setDaemon(true);
+        thread.start();
+    }
+
+    public void autoSaveSystem(){
+        Thread thread = new Thread(() -> {
+            while (true){
+                try {
+                    if(change) {
+                        ObjectOutputStream bookOutput = new ObjectOutputStream(new FileOutputStream("C:/Users/kitri/IdeaProjects/book-manager2/books.txt"));
+                        bookOutput.writeObject(bookList);
+                        System.out.println("\n자동저장!");
+                        change = false;
+                    } else {
+                        Thread.sleep(1000);
+                    }
                 } catch (Exception e) {
                     throw new RuntimeException(e);
                 }
