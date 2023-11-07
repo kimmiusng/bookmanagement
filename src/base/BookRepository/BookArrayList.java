@@ -13,7 +13,12 @@ public class BookArrayList implements BookRepository{
     public void addBook(Book book) {bookList.add(book);}
 
     @Override
-    public void removeBook(Book book) {bookList.remove(book);}
+    public void removeBook(Book book) {
+        try{bookList.remove(book);}
+        catch (NullPointerException e){
+            System.out.println("Id를 찾을 수 없습니다. 다시 입력해주십시오.");
+        }
+    }
 
     @Override
     public Book getBook(Long id) {

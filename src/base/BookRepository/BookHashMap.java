@@ -16,7 +16,10 @@ public class BookHashMap implements BookRepository, Serializable{
 
     @Override
     public void removeBook(Book book){
-        bookList.remove(book.getId());
+        try{bookList.remove(book.getId());}
+        catch (NullPointerException e){
+            System.out.println("Id를 찾을 수 없습니다. 다시 입력해주십시오.");
+        }
     }
 
     @Override
