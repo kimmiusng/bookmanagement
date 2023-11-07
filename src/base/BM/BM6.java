@@ -14,9 +14,8 @@ public class BM6 extends BookManager {
     private boolean change = false;
     @Override
     public void init(){
-        ObjectInputStream bookInput = null;
         try {
-            bookInput = new ObjectInputStream(new FileInputStream("C:/Users/kitri/IdeaProjects/book-manager2/books.txt"));
+            ObjectInputStream bookInput = new ObjectInputStream(new FileInputStream("C:/Users/kitri/IdeaProjects/book-manager2/books.txt"));
             bookList = (BookRepository) bookInput.readObject();
             bookInput.close();
         } catch (Exception e) {

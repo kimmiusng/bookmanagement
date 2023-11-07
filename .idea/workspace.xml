@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2b044c0-9e5e-43e9-b0eb-1248806b5c8b" name="Changes" comment="BM5 + 패키징">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base/BM/BM6.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/BM/BM6.java" afterDir="false" />
-    </list>
+    <list default="true" id="c2b044c0-9e5e-43e9-b0eb-1248806b5c8b" name="Changes" comment="BM6 + AutoSave + remove NullPointerExeption" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,6 +24,20 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "s12171934"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="03b709ab-a8f5-4404-bf03-8312d3e02965" />
+        <option name="url" value="https://github.com/kimmiusng/bookmanagement.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -145,7 +156,23 @@
       <option name="project" value="LOCAL" />
       <updated>1699248033644</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="BM6 + AutoSave">
+      <option name="closed" value="true" />
+      <created>1699315816513</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1699315816513</updated>
+    </task>
+    <task id="LOCAL-00008" summary="BM6 + AutoSave + remove NullPointerExeption">
+      <option name="closed" value="true" />
+      <created>1699316044163</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1699316044163</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,7 +196,9 @@
     <MESSAGE value="BM5 + BookArrayList" />
     <MESSAGE value="BM5 + 목차" />
     <MESSAGE value="BM5 + 패키징" />
-    <option name="LAST_COMMIT_MESSAGE" value="BM5 + 패키징" />
+    <MESSAGE value="BM6 + AutoSave" />
+    <MESSAGE value="BM6 + AutoSave + remove NullPointerExeption" />
+    <option name="LAST_COMMIT_MESSAGE" value="BM6 + AutoSave + remove NullPointerExeption" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
